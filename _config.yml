@@ -6,13 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Gravity
-email: hemangsk@gmail.com
-description: The Liberal Jekyll Theme
+title: Sunho
+email: sssunho.lee@gmail.com
+description: write thinking and errors
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: hemang_kumar
-github_username:  hemangsk
+url: "http://sssunho.github.io" # the base hostname & protocol for your site
+github_username: sssunho
 paginate: 5
 theme-dark: false #Set to true to change to dark website theme
 

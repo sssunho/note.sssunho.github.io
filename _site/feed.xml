@@ -1,104 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gravity</title>
-    <description>The Liberal Jekyll Theme</description>
+    <title>Sunho</title>
+    <description>write thinking and errors</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Jul 2018 21:43:37 +0900</pubDate>
-    <lastBuildDate>Mon, 02 Jul 2018 21:43:37 +0900</lastBuildDate>
+    <pubDate>Mon, 02 Jul 2018 23:29:43 +0900</pubDate>
+    <lastBuildDate>Mon, 02 Jul 2018 23:29:43 +0900</lastBuildDate>
     <generator>Jekyll v3.8.3</generator>
     
       <item>
-        <title>Welcome to Gravity!</title>
-        <description>&lt;p&gt;Gravity is an unopinionated theme for Jekyll, the awesome static site generator.&lt;/p&gt;
+        <title>고민만 하는 사람</title>
+        <description>&lt;p&gt;나는 같은 문제를 제자리 걸음으로 고민한다.&lt;/p&gt;
 
-&lt;p&gt;Some General Instructions for Jekyll&lt;/p&gt;
+&lt;p&gt;왜그럴까 생각해보면, 고민만 하고 행동으로 보이지 않기 때문이다.&lt;/p&gt;
 
-&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;그래서 이곳에 흔적들을 남기면서 고민하며 좀 더 나은 방법들을 조금씩이라도 실천해보려 한다.
+못미더운 나의 기억력을 기록하니까 좀 더 나아지지 않을까 하는 기대를 한다.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Mar 2016 23:15:31 +0900</pubDate>
-        <link>http://localhost:4000/jekyll/update/2016/03/30/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2016/03/30/welcome-to-jekyll.html</guid>
+        <pubDate>Mon, 02 Jul 2018 22:46:27 +0900</pubDate>
+        <link>http://localhost:4000/think/2018/07/02/thingking-category.html</link>
+        <guid isPermaLink="true">http://localhost:4000/think/2018/07/02/thingking-category.html</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>think</category>
         
       </item>
     
       <item>
-        <title>Long Longer and more Longer titles look cool too!!</title>
-        <description>&lt;p&gt;“Could I be anymore pulling ?”&lt;/p&gt;
+        <title>START!</title>
+        <description>&lt;p&gt;깃헙 페이지를 드디어 시작해보려한다.&lt;/p&gt;
 
-&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+&lt;p&gt;기록하는 것을 좋아하긴 하지만 중구난방으로 하기때문에 찾으려면 고생하기도 하고, 다시 찾으려고도 하지 않아서 같은 내용이 몇개씩 쌓인다.&lt;/p&gt;
 
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;p&gt;최근에 내가 예전에 기록했던 것들을 봤는데 생각보다 꽤 쌓였고, 생각보다 뿌듯하기도 해서 한 곳에 모으기로 했다. (아깝잖아!)&lt;/p&gt;
 
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+&lt;p&gt;내가 제일 좋아하는 마크다운 형식을 사용하고 싶어서 여러 블로그들을 알아보았지만 깃헙만큼 마크다운을 제대로 유지하고 디자인도 마음에 드는 블로그가 없어서 결국 깃헙을 선택했다.&lt;/p&gt;
+
+&lt;p&gt;테마를 설치하고 수정하는게 어려워서 좀 망설였지만, 막상 해보니 재밌고 간단해서 좋다.&lt;/p&gt;
+
+&lt;p&gt;심지어 컨트리뷰션도 쌓을 수 있다니! 뿌듯함이 두배가 된다!&lt;/p&gt;
+
+&lt;p&gt;주변 사람에게 글을 보인다는 것 자체가 나에게 도전이다.&lt;/p&gt;
+
+&lt;p&gt;그리고 대놓고 시작한 이상 꾸준히 하여 컨트리뷰션을 초록색으로 덮고싶다!&lt;/p&gt;
 </description>
-        <pubDate>Wed, 30 Mar 2016 23:15:31 +0900</pubDate>
-        <link>http://localhost:4000/science/2016/03/30/science0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/science/2016/03/30/science0.html</guid>
+        <pubDate>Mon, 02 Jul 2018 22:31:50 +0900</pubDate>
+        <link>http://localhost:4000/2018/07/02/start-github-pages.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/07/02/start-github-pages.html</guid>
         
-        
-        <category>science</category>
-        
-      </item>
-    
-      <item>
-        <title>Science of Gravity</title>
-        <description>&lt;p&gt;“Could I be anymore pulling ?”&lt;/p&gt;
-
-&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Mar 2016 23:15:31 +0900</pubDate>
-        <link>http://localhost:4000/science/2016/03/30/science.html</link>
-        <guid isPermaLink="true">http://localhost:4000/science/2016/03/30/science.html</guid>
-        
-        
-        <category>science</category>
-        
-      </item>
-    
-      <item>
-        <title>Design Stories : Gravity</title>
-        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-
-&lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Mar 2016 23:15:31 +0900</pubDate>
-        <link>http://localhost:4000/design/science/life/2016/03/30/design-stories.html</link>
-        <guid isPermaLink="true">http://localhost:4000/design/science/life/2016/03/30/design-stories.html</guid>
-        
-        
-        <category>design</category>
-        
-        <category>science</category>
-        
-        <category>life</category>
         
       </item>
     
