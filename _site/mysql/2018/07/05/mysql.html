@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sunho</title>
-  <meta name="description" content="write thinking and errors">
+  <title>[MySQL] where is my.cnf?</title>
+  <meta name="description" content="  쉘에 mysqld --verbose --help | grep -A 1 'Default options' 입력">
   <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Source+Sans+Pro:400,700,200,300|Josefin+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="canonical" href="http://localhost:4000/mysql/2018/07/05/mysql.html">
   <link rel="alternate" type="application/rss+xml" title="Sunho" href="http://localhost:4000/feed.xml">
 </head>
 
@@ -58,112 +58,43 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline"><a class="post-title-link"  href="/mysql/2018/07/05/mysql.html">[MySQL] where is my.cnf?</a></h1>
+  <center>  <p class="post-meta"><time datetime="2018-07-05T21:28:10+09:00" itemprop="datePublished">Jul 5, 2018</time></p>
+    
+   </center>
+  </header>
 
-  
-  <div class="post postContent">
-    <div  class="postDate"><time datetime="2018-07-05T21:28:10+09:00" itemprop="datePublished">Jul 5, 2018</time>
-    </div>
-    <div class="postTag">
-      
-    </div>
-    <br>
-    <div class="postTitle">
-    <a class='postLink' href="http://localhost:4000/mysql/2018/07/05/mysql.html">[MySQL] where is my.cnf?</a>
-    </div>
-    <div class="postExt">
-   
-  
-    쉘에 mysqld --verbose --help | grep -A 1 'Default options' 입력
-  
-  
-    입력 결과로 my.cnf가 있는 위치들이 주욱 나온다.
-  
+  <div class="post-content" itemprop="articleBody">
+    <ol>
+  <li>
+    <p>쉘에 <code class="highlighter-rouge">mysqld --verbose --help | grep -A 1 'Default options'</code> 입력</p>
+  </li>
+  <li>
+    <p>입력 결과로 my.cnf가 있는 위치들이 주욱 나온다.</p>
+  </li>
+</ol>
 
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>mysqld <span class="nt">--verbose</span> <span class="nt">--help</span> | <span class="nb">grep</span> <span class="nt">-A</span> 1 <span class="s1">'Default options'</span> 
+Default options are <span class="nb">read </span>from the following files <span class="k">in </span>the given order: 
+/etc/my.cnf /etc/mysql/my.cnf ~/.my.cnf 
+</code></pre></div></div>
 
-$ mysqld --verbose --help | grep -A 1 'Default options' 
-Default options are read f...
-    </div>
   </div>
 
+  <footer class="postNavigation">
   
-  <div class="post postContent">
-    <div  class="postDate"><time datetime="2018-07-02T22:46:27+09:00" itemprop="datePublished">Jul 2, 2018</time>
-    </div>
-    <div class="postTag">
-      
-    </div>
-    <br>
-    <div class="postTitle">
-    <a class='postLink' href="http://localhost:4000/think/2018/07/02/thingking-category.html">고민만 하는 사람</a>
-    </div>
-    <div class="postExt">
-   나는 같은 문제를 제자리 걸음으로 고민한다.
-
-왜그럴까 생각해보면, 고민만 하고 행동으로 보이지 않기 때문이다.
-
-그래서 이곳에 흔적들을 남기면서 고민하며 좀 더 나은 방법들을 조금씩이라도 실천해보려 한다.
-못미더운 나의 기억력을 기록하니까 좀 더 나아지지 않을까 하는 기대를 한다.
-
-    </div>
-  </div>
-
-  
-  <div class="post postContent">
-    <div  class="postDate"><time datetime="2018-07-02T22:31:50+09:00" itemprop="datePublished">Jul 2, 2018</time>
-    </div>
-    <div class="postTag">
-      
-    </div>
-    <br>
-    <div class="postTitle">
-    <a class='postLink' href="http://localhost:4000/2018/07/02/start-github-pages.html">START!</a>
-    </div>
-    <div class="postExt">
-   깃헙 페이지를 드디어 시작해보려한다.
-
-기록하는 것을 좋아하긴 하지만 중구난방으로 하기때문에 찾으려면 고생하기도 하고, 다시 찾으려고도 하지 않아서 같은 내용이 몇개씩 쌓인다.
-
-최근에 내가 예전에 기록했던 것들을 봤는데 생각보다 꽤 쌓였고, 생각보다 뿌듯하기도 해서 한 곳에 모으기로 했다. (아깝잖아!)
-
-내가 제일 좋아하는 마크다운 형식을 사용하고...
-    </div>
-  </div>
-
+    <a class="postPrev" href="/think/2018/07/02/thingking-category.html">
+        &laquo; 고민만 하는 사람
+    </a>
   
   
-  <!--<ul class="post-list">
-    
-      <li>
-        <span class="post-meta-main">Jul 5, 2018</span>
-
-        <h2>
-          <a class="post-link-main" href="/mysql/2018/07/05/mysql.html">[MySQL] where is my.cnf?</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta-main">Jul 2, 2018</span>
-
-        <h2>
-          <a class="post-link-main" href="/think/2018/07/02/thingking-category.html">고민만 하는 사람</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta-main">Jul 2, 2018</span>
-
-        <h2>
-          <a class="post-link-main" href="/2018/07/02/start-github-pages.html">START!</a>
-        </h2>
-      </li>
-    
-  </ul>-->
+  </footer>
 
 
-
-</div>
+</article>
 
       </div>
     </div>
