@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>git/ process to `push` - sunho lee.</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="sunho lee." property="og:site_name">
+  
+    <meta content="git/ process to `push`" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Hi, I prefer sunho." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/2018/07/07/1146-git.html" property="og:url">
+  
+  
+    <meta content="2018-07-07T01:46:00+09:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/sunny-ciceron.jpeg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="git" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@sssunho# add your Twitter handle">
+  
+    <meta name="twitter:title" content="git/ process to `push`">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/2018/07/07/1146-git.html">
+  
+  
+    <meta name="twitter:description" content="Hi, I prefer sunho.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/sunny-ciceron.jpeg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/sunny-ciceron.jpeg" alt="sunho"></a>
+      </div>
+      <div class="author-name">sunho</div>
+      <p>I am a web developer focusing on back-end development. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/sssunho# add your Twitter handle" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/sunho.lee.58511" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/sssunho" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/선호-이-33522a14a" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:sssunho.lee@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; sunho</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">git/ process to `push`</h1>
+        <div class="page-date"><span>2018, Jul 07&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>git을 사용하는 이유는 버전 관리를 하기 위해서 입니다.</p>
+
+<p>repository가 여러 군데 있어도 commit은 한 곳에 push되고, 그 버전관리는 commit으로 합니다.</p>
+
+<p>*</p>
+
+<p>오늘은 commit을 push하는 과정에 대해 정리해 보았습니다.
+<br /><br /></p>
+
+<h1 id="1-git-add">1. git add</h1>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git status
+...
+
+Changes not staged <span class="k">for </span>commit:
+<span class="o">(</span>use <span class="s2">"git add &lt;file&gt;..."</span> to update what will be committed<span class="o">)</span>
+<span class="o">(</span>use <span class="s2">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="k">in </span>working directory<span class="o">)</span>
+
+...수정된 파일 목록...
+</code></pre></div></div>
+<p><code class="highlighter-rouge">git status</code>를 입력하면 수정된 파일 목록과 함께 어떻게 하라는 방법을 제시해줍니다. 친절하게.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 방법 1: 하나씩 걸러 넣을 때</span>
+<span class="nv">$ </span>git add <span class="sb">`</span>file name<span class="sb">`</span>
+
+<span class="c"># 방법 2: 한번에 다 넣을 때</span>
+<span class="nv">$ </span>git add <span class="nb">.</span>
+</code></pre></div></div>
+<p>commit에 반영할 파일들을 <code class="highlighter-rouge">git add</code> 해줍니다.
+제외할거면 <code class="highlighter-rouge">git checkout -- &lt;file&gt;</code> 해주시면 됩니다.
+<br /><br /></p>
+
+<h1 id="2-git-commit">2. git commit</h1>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git commit
+<span class="nv">$ </span>git commit <span class="nt">--amend</span>    <span class="c"># gerrit에서</span>
+</code></pre></div></div>
+<p>수정 사항들을 add 해줬다면 <code class="highlighter-rouge">commit</code>을 해줍니다.</p>
+
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>commit 제목을 입력해주세요
+
+설명을 넣어주세요<span class="p">.</span> 자세할수록 좋아요<span class="p">.</span>
+한줄에 <span class="m">50</span>자 이상은 넣지 않는 것을 추천합니다<span class="p">.</span> 아래의 주석보다 짧기만하면 됩니다<span class="p">.</span>
+commit 제목과 아래의 주석에 한줄씩 빈 공백을 꼭 넣어주세요<span class="p">.</span> 
+설명을 넣지 않는다면 <span class="m">2</span>줄의 빈칸이 들어가겠죠?
+
+# Please enter the commit message <span class="k">for</span> your <span class="k">changes</span><span class="p">.</span> Lines starting
+# with <span class="s1">'#'</span> will be ignored<span class="p">,</span> and an empty message aborts the commit<span class="p">.</span>
+#
+# On branch master
+# Your branch <span class="k">is</span> <span class="k">up</span> <span class="k">to</span> date with <span class="s1">'origin/master'</span><span class="p">.</span>
+#
+# Changes <span class="k">to</span> be committed<span class="p">:</span>
+#       modified<span class="p">:</span>   file01<span class="p">.</span>name
+#       <span class="k">new</span> <span class="k">file</span><span class="p">:</span>   file02<span class="p">.</span>name
+#
+</code></pre></div></div>
+<p>위의 명령어를 입력하면 텍스트 편집창이 뜹니다. 제목과 설명을 다 적었다면 esc키를 누르고 <code class="highlighter-rouge">:wq</code>를 입력하며 빠져나오세요.
+<br /><br /></p>
+
+<h1 id="3-git-push">3. git push</h1>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 방법 1</span>
+<span class="nv">$ </span>git push
+
+<span class="c"># 방법 2</span>
+<span class="c"># 현재 branch가 아니라 다른 branch로 보낼 때 사용할수도 있습니다.</span>
+<span class="nv">$ </span>git push origin HEAD:origin/<span class="sb">`</span>branch 이름<span class="sb">`</span>
+</code></pre></div></div>
+<p>commit을 repository에 적용될 수 있도록 push한다.</p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=git/ process to `push`&url=http://localhost:4000/2018/07/07/1146-git.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/07/1146-git.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/07/1146-git.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#git" class="tag">&#35; git</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

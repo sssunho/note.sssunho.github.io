@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>git/ start - sunho lee.</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="sunho lee." property="og:site_name">
+  
+    <meta content="git/ start" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Hi, I prefer sunho." property="og:description">
+  
+  
+    <meta content="http://localhost:4000/2018/07/07/1110-git.html" property="og:url">
+  
+  
+    <meta content="2018-07-07T01:10:00+09:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img/sunny-ciceron.jpeg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="git" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@sssunho# add your Twitter handle">
+  
+    <meta name="twitter:title" content="git/ start">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/2018/07/07/1110-git.html">
+  
+  
+    <meta name="twitter:description" content="Hi, I prefer sunho.">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/sunny-ciceron.jpeg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/sunny-ciceron.jpeg" alt="sunho"></a>
+      </div>
+      <div class="author-name">sunho</div>
+      <p>I am a web developer focusing on back-end development. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/sssunho# add your Twitter handle" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/sunho.lee.58511" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/sssunho" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/선호-이-33522a14a" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:sssunho.lee@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; sunho</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">git/ start</h1>
+        <div class="page-date"><span>2018, Jul 07&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p><a href="https://git-scm.com/">git</a> is version control system.</p>
+
+<p>github, bitbucket 등은 git을 지원하는 소프트웨어, 프로그램이다.
+<br /><br /></p>
+
+<h1 id="git-clone">git clone</h1>
+<p>repository(프로젝트 폴더)를 새로운 장소에 다운로드할 때 쓰는 명령어.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone <span class="sb">`</span>url<span class="sb">`</span>
+</code></pre></div></div>
+<p>repository를 만들면 url 주소가 제공되는데 이 주소를 넣어준다.
+<br /><br /></p>
+
+<h1 id="git-branch">git branch</h1>
+
+<h3 id="branch-목록-조회">branch 목록 조회</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git branch <span class="nt">-vv</span>
+<span class="k">*</span> master 4c1a5b5 <span class="o">[</span>origin/master] Initial Commit
+</code></pre></div></div>
+<p>브랜치 목록을 확인할 수 있다.
+-vv 를 넣어주면 보다 자세한 정보도 함께 출력된다.</p>
+
+<p><br /></p>
+
+<h3 id="branch-삭제">branch 삭제</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git brnach <span class="nt">-D</span> <span class="sb">`</span>삭제할 브랜치 이름<span class="sb">`</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="branch-가져오기">branch 가져오기</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 방법 1</span>
+<span class="nv">$ </span>git checkout <span class="nt">-b</span> <span class="sb">`</span>branch 이름<span class="sb">`</span> origin/<span class="sb">`</span>가져올 branch 이름<span class="sb">`</span>
+
+<span class="c"># 방법 2</span>
+<span class="nv">$ </span>git fetch <span class="o">&amp;&amp;</span> git checkout <span class="sb">`</span>가져올 brnach 이름<span class="sb">`</span>
+</code></pre></div></div>
+<p>내가 쓸 브랜치가 목록에 없다면 위의 명령어를 통해 브랜치를 가져올 수 있다.</p>
+
+<ul>
+  <li>branch 이름: 내가 임의로 정할 수 있다. 나는 보통 브랜치이름 그대로 쓴다.</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="branch-이동">branch 이동</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git checkout <span class="sb">`</span>branch 이름<span class="sb">`</span>
+</code></pre></div></div>
+<p>다른 브랜치로 이동할 수 있다.
+<br /><br /></p>
+
+<h2 id="git-status">git status</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git status
+On branch master
+Your branch is up to <span class="nb">date </span>with <span class="s1">'origin/master'</span><span class="nb">.</span>
+
+Changes not staged <span class="k">for </span>commit:
+<span class="o">(</span>use <span class="s2">"git add &lt;file&gt;..."</span> to update what will be committed<span class="o">)</span>
+<span class="o">(</span>use <span class="s2">"git checkout -- &lt;file&gt;..."</span> to discard changes <span class="k">in </span>working directory<span class="o">)</span>
+
+ modified:   file01.name
+  deleted:   file02.name
+
+Untracked files:
+<span class="o">(</span>use <span class="s2">"git add &lt;file&gt;..."</span> to include <span class="k">in </span>what will be committed<span class="o">)</span>
+
+file01.name
+
+no changes added to commit <span class="o">(</span>use <span class="s2">"git add"</span> and/or <span class="s2">"git commit -a"</span><span class="o">)</span>
+</code></pre></div></div>
+
+<p>현재 상황을 볼 수 있다.
+현재 브랜치, 수정/삭제/생성된 파일 등을 볼 수 있다.</p>
+
+<p>충돌이 생기거나 문제가 생긴 경우에도 알려준다.
+<br /><br /></p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=git/ start&url=http://localhost:4000/2018/07/07/1110-git.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/07/1110-git.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/07/1110-git.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#git" class="tag">&#35; git</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
