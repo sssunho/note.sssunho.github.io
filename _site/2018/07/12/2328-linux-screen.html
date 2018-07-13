@@ -2,38 +2,51 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>sunho lee.</title>
+	<title>linux/ install and set screen - sunho lee.</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="sunho lee." property="og:site_name">
   
-    <meta content="sunho lee." property="og:title">
+    <meta content="linux/ install and set screen" property="og:title">
   
   
-    <meta content="website" property="og:type">
+    <meta content="article" property="og:type">
   
   
     <meta content="Hi, I prefer sunho." property="og:description">
   
   
-    <meta content="http://localhost:4000/page/2/" property="og:url">
+    <meta content="http://localhost:4000/2018/07/12/2328-linux-screen.html" property="og:url">
   
+  
+    <meta content="2018-07-12T23:28:00+09:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
   
   
     <meta content="http://localhost:4000/assets/img/sunny-ciceron.jpeg" property="og:image">
   
   
+    
+  
+  
+    
+    <meta content="linux" property="article:tag">
+    
+    <meta content="ubuntu" property="article:tag">
+    
+    <meta content="screen" property="article:tag">
+    
   
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@sssunho# add your Twitter handle">
   
-    <meta name="twitter:title" content="sunho lee.">
+    <meta name="twitter:title" content="linux/ install and set screen">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/page/2/">
+    <meta name="twitter:url" content="http://localhost:4000/2018/07/12/2328-linux-screen.html">
   
   
     <meta name="twitter:description" content="Hi, I prefer sunho.">
@@ -105,57 +118,71 @@
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
 <div class="content-box clearfix">
-  
-<article class="post">
-  
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/2017/08/07/1148-git-branch.html">git/ process to `push`</a></h2>
-    <p>git을 사용하는 이유는 버전 관리를 하기 위해서 입니다. repository가 여러 군데 있어도 commit은 한 곳에...</p>
-    <span class="post-date">2017, Aug 07&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">2 minute read</span>
+  <article class="article-page">
+  <div class="page-content">
+    
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">linux/ install and set screen</h1>
+        <div class="page-date"><span>2018, Jul 12&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <h3 id="spec">spec</h3>
+
+<ul>
+  <li>ubuntu</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="install">install</h2>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>apt-get update
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>screen
+</code></pre></div></div>
+<p>어디서든, 뭔가를 설치할 때 <code class="highlighter-rouge">sudo</code>를 붙여라. <code class="highlighter-rouge">permission denied</code> 에러를 한번이라도 더 피할 수 있습니다.</p>
+
+<p><br /></p>
+
+<h2 id="setting">setting</h2>
+
+<p>아무런 세팅 설정 않고 스크린에 입장하면 아무것도 없이 빈칸만 떠서 당황할 수 있습니다.</p>
+
+<p>세팅은 <code class="highlighter-rouge">~/.screenrc</code> 파일을 편집해주세요.</p>
+
+<h3 id="statusbar">statusbar</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hardstatus alwayslastline
+shelltitle 'bash'
+hardstatus string "%{.bW}%-w%{.rW}%n*%t%{-}%+w %= %c ${USER}@%H"
+</code></pre></div></div>
+
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=linux/ install and set screen&url=http://localhost:4000/2018/07/12/2328-linux-screen.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/12/2328-linux-screen.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/12/2328-linux-screen.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#linux" class="tag">&#35; linux</a>
+          
+            <a href="/tags#ubuntu" class="tag">&#35; ubuntu</a>
+          
+            <a href="/tags#screen" class="tag">&#35; screen</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
   </div>
-</article>
+</section> <!-- End Comment Area -->
 
-<article class="post">
-  
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/2017/08/07/1146-git-start.html">git/ start</a></h2>
-    <p>git is version control system. github, bitbucket 등은 git을 지원하는 소프트웨어, 프로그램이다. git clone repository(프로젝트...</p>
-    <span class="post-date">2017, Aug 07&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">2 minute read</span>
-  </div>
-</article>
-
-<article class="post">
-  
-  
-  <div class="post-content">
-    <h2 class="post-title"><a href="/2017/08/07/0000.html">development blog? wrong answer note?</a></h2>
-    <p>블로그일수도 오답노트일수도 있는 곳이에요. 내가 겪게 되는 수많은 에러들이 있는게 반복해서 겪게 되더라구요. 그래서 그걸...</p>
-    <span class="post-date">2017, Aug 07&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">1 minute read</span>
-  </div>
-</article>
-
-
-<div class="container">
-  <nav class="pagination" role="pagination">
-    <ul>
-      
-        
-        <p><a class="newer-posts" href="/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></a></p>
-        
-      
-
-      <p><span class="page-number">Page 2 of 2</span></p>
-
-      
-    </ul>
-  </nav>
-</div>
-
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
 
 </div>
 
