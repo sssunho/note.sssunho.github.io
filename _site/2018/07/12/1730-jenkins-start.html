@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>jekyll/ GemNotFound - sunho lee.</title>
+	<title>jenkins/ try scheduler - sunho lee.</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="sunho lee." property="og:site_name">
   
-    <meta content="jekyll/ GemNotFound" property="og:title">
+    <meta content="jenkins/ try scheduler" property="og:title">
   
   
     <meta content="article" property="og:type">
@@ -17,10 +17,10 @@
     <meta content="Hi, I prefer sunho." property="og:description">
   
   
-    <meta content="http://localhost:4000/2018/07/11/jekyll-jemoji.html" property="og:url">
+    <meta content="http://localhost:4000/2018/07/12/1730-jenkins-start.html" property="og:url">
   
   
-    <meta content="2018-07-11T22:48:00+09:00" property="article:published_time">
+    <meta content="2018-07-12T17:30:00+09:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
@@ -31,11 +31,9 @@
   
   
     
-    <meta content="githubpages" property="article:tag">
+    <meta content="tool" property="article:tag">
     
-    <meta content="jekyll" property="article:tag">
-    
-    <meta content="errors" property="article:tag">
+    <meta content="jenkins" property="article:tag">
     
   
 
@@ -43,10 +41,10 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@sssunho# add your Twitter handle">
   
-    <meta name="twitter:title" content="jekyll/ GemNotFound">
+    <meta name="twitter:title" content="jenkins/ try scheduler">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/2018/07/11/jekyll-jemoji.html">
+    <meta name="twitter:url" content="http://localhost:4000/2018/07/12/1730-jenkins-start.html">
   
   
     <meta name="twitter:description" content="Hi, I prefer sunho.">
@@ -124,73 +122,50 @@
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">jekyll/ GemNotFound</h1>
-        <div class="page-date"><span>2018, Jul 11&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">jenkins/ try scheduler</h1>
+        <div class="page-date"><span>2018, Jul 12&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <h2 id="problem">problem</h2>
+      <p>처음으로 스케줄러 작업을 해보았습니다.</p>
 
-<p>github pages에 포스팅할 때, 수정사항이 반영됐나 바로 확인하기 위해서 <code class="highlighter-rouge">jekyll serve</code>를 돌리고 싶었습니다.</p>
+<p>jenkins, apache mesos, celery 등 여러 도구로 작업할 수 있는데, 그 중에서 젠킨스를 선택했습니다. 사수가 이것을 이용하고 있었던게 가장 큰 이유입니다.</p>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>jekyll serve
-/Library/Ruby/Gems/2.3.0/gems/bundler-1.16.2/lib/bundler/spec_set.rb:91:in <span class="sb">`</span>block <span class="k">in </span>materialize<span class="s1">': Could not find gemoji-3.0.0 in any of the sources (Bundler::GemNotFound)
-...
-</span></code></pre></div></div>
-<p>GemNotFound가 뜨면서 <code class="highlighter-rouge">gemoji</code>를 찾을 수 없다고 합니다.</p>
+<p><a href="https://jenkins.io/">젠킨스</a>는 소프트웨어 개발 시 지속적 통합(continuous integration) 서비스를 제공하는 툴이라고 위키백과에서 알려줬어요. 마우스 클릭만으로도 등록할 수 있어 배우기 쉽고 간편하다는 장점이 있다고 합니다.
+mesos는 코드로 작업해야하지만 기능은 더 많고, celery는 스케줄러로 등록할 내용을 API로 만들어서 몇분마다 요청하도록 하는 파이썬 패키지래요.</p>
 
-<p><br /></p>
-
-<h2 id="cause">cause</h2>
-
-<p>Gemfile에 추가해둔 gemoji가 문제입니다. gemoji가 설치가 안되어 있는거죠.</p>
-
-<p>그럼 gemoji를 설치해주면 되겠습니다.</p>
+<p>시작부터 너무 많은 일들이 있어서, 에피소드별로 정리하려고 합니다. 화이팅!</p>
 
 <p><br /></p>
 
-<h2 id="solution">solution</h2>
+<h3 id="작업-환경">작업 환경</h3>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle
-</code></pre></div></div>
-<p><code class="highlighter-rouge">bundle</code> 명령어를 통해 Gemfile에 추가한 gem을 설치해줍니다.</p>
+<ul>
+  <li>jenkins</li>
+  <li>ubuntu</li>
+  <li>java version “1.8.0_171”</li>
+</ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Gem::FilePermissionError: You don<span class="s1">'t have write permissions for the /var/folders/53/m5_nh66s4zqf0r36sgc3dyx40000gp/T/bundler20180711-1697-1vghnecgemoji-3.0.0/bin directory.
-An error occurred while installing gemoji (3.0.0), and Bundler cannot continue.
-Make sure that `gem install gemoji -v '</span>3.0.0<span class="s1">' --source '</span>https://rubygems.org/<span class="s1">'` succeeds before bundling.
+<p><br /></p>
 
-In Gemfile:
-  gemoji
-</span></code></pre></div></div>
-<p>라며 permission error가 나타날 수도 있습니다.</p>
+<h3 id="jenkins-사용-중-겪은-에피소드">jenkins 사용 중 겪은 에피소드</h3>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 방법 1</span>
-<span class="nv">$ </span>gem <span class="nb">install </span>gemoji <span class="nt">-v</span> <span class="s1">'3.0.0'</span> <span class="nt">--source</span> <span class="s1">'https://rubygems.org/'</span>
-
-<span class="c"># 방법 2</span>
-<span class="nv">$ </span><span class="nb">sudo </span>bundle
-Don<span class="s1">'t run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this machine.
-Fetching gem metadata from https://rubygems.org/...........
-...
-Bundle complete! 3 Gemfile dependencies, 29 gems now installed.
-Use `bundle info [gemname]` to see where a bundled gem is installed.
-</span></code></pre></div></div>
-<p>두 가지 방법으로 설치를 할 수 있습니다.</p>
-
-<p>두번째 방법은 경고가 뜨기 때문에 첫번째 방법을 추천합니다.</p>
+<ul>
+  <li>install jenkins on ubuntu</li>
+  <li><a href="https://sssunho.github.io/2018/07/12/1753-jenkins-slavenode.html">create slave node via SSH</a></li>
+  <li>create new item</li>
+</ul>
 
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=jekyll/ GemNotFound&url=http://localhost:4000/2018/07/11/jekyll-jemoji.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/11/jekyll-jemoji.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/11/jekyll-jemoji.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+          <a href="https://twitter.com/intent/tweet?text=jenkins/ try scheduler&url=http://localhost:4000/2018/07/12/1730-jenkins-start.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/12/1730-jenkins-start.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/12/1730-jenkins-start.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
-            <a href="/tags#githubpages" class="tag">&#35; githubpages</a>
+            <a href="/tags#tool" class="tag">&#35; tool</a>
           
-            <a href="/tags#jekyll" class="tag">&#35; jekyll</a>
-          
-            <a href="/tags#errors" class="tag">&#35; errors</a>
+            <a href="/tags#jenkins" class="tag">&#35; jenkins</a>
           
         </div>
       </div>

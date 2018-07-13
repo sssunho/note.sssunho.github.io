@@ -59,5 +59,3 @@ Use `bundle info [gemname]` to see where a bundled gem is installed.
 
 두번째 방법은 경고가 뜨기 때문에 첫번째 방법을 추천합니다.
 
-<br>
-

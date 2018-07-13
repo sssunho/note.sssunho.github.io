@@ -25,6 +25,14 @@
 <lastmod>2018-07-11T22:48:00+09:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2018/07/12/1730-jenkins-start.html</loc>
+<lastmod>2018-07-12T17:30:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2018/07/12/1753-jenkins-slavenode.html</loc>
+<lastmod>2018-07-12T17:53:00+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/2018/07/12/2305-linux-screen.html</loc>
 <lastmod>2018-07-12T23:06:00+09:00</lastmod>
 </url>
@@ -33,5 +41,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/tags/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page/2/</loc>
 </url>
 </urlset>
