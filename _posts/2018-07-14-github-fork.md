@@ -1,6 +1,6 @@
 ---
 layout: post
-title: git/ github, fork repository and pull request
+title: git/ github, fork and pull request
 date: 2018-07-14 00:00:00 KST
 tags: [git]
 ---
