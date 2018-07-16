@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "Welcome to Jekyll!"
-date: 2017-04-06 13:32:20 +0300
+title: project/ color picker
+date: 2017-08-08 13:32:20 KST
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img:  # Add image post (optional)
 ---
 
-# Color Picker
 pick most used colors.
 
 The file format does not matter. At least jpg and png are possible.
@@ -28,6 +27,8 @@ pip3 install scipy
 pip3 install matplotlib
 pip3 install opencv-python
 ```
+
+<br>
 
 ## How to use
 ### use with Flask
@@ -64,6 +65,7 @@ I recommend that you only include `num` up to 5
 python pick_colors_with_argparse.py --image images/your_image.png --clusters 3
 ```
 
+<br>
 
 ## Reference
 - [OpenCV and Python K-Means Color Clustering](http://www.pyimagesearch.com/2014/05/26/opencv-python-k-means-color-clustering/)
