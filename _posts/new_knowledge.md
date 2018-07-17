@@ -1,18 +1,12 @@
 ---
 layout: post
-title: "Welcome to Jekyll!"
+title: aws+python/ boto3, the AWS SDK for Python
 date: 2017-04-06 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img:  # Add image post (optional)
 ---
 
-AWS S3 설치
-
-https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/awscli-install-linux-al2017.html
-
-Mac에서는 
-brew install awscli
-설치하고
-aws configure
-입력해서 기본 세팅해주면 끝!
+## issue
+## process
+## epilogue
 
