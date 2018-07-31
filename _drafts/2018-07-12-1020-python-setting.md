@@ -45,6 +45,8 @@ ImportError: No module named 'google'
 pip install --upgrade google-api-python-client
 ```
 
+pip 설치하기
+`python3 get-pip.py`
 
 
 

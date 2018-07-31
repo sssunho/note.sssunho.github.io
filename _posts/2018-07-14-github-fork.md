@@ -23,6 +23,8 @@ github에서 너무 친절하게 설명을 해줘서, 굳이 제가 따로 적�
 
 [github - Fork a repo](https://help.github.com/articles/fork-a-repo/)
 
+[github - Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
+
 <br>
 
 ### pull request to original repository
