@@ -16,5 +16,17 @@ Bot Settings - Group Privacy - disabled
 
 
 sendPhoto
+https://core.telegram.org/bots/api#sendphoto
+> 도움 1도 안된다
 
+```python
+data = {
+'chat_id': str(chat_id),
+'photo': open('./photos/{}'.format(photo), 'rb'),
+'caption': 'caption aweoirhjqw;ef'
+}
+async with aiohttp.ClientSession() as session:
+async with session.post(url, data=data) as resp:
+return True
+```
 
