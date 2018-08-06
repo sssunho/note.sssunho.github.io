@@ -30,3 +30,42 @@ async with session.post(url, data=data) as resp:
 return True
 ```
 
+
+editMessage
+
+```python
+async def edit_message(self, chat_id, message_id, message, reply_markup=None):
+apiEndpoint_edit = "https://api.telegram.org/bot{}/editMessageText".format(self.token)
+headers = {"Content-Type": "application/json"}
+data = {
+"chat_id": chat_id,
+"text": message,
+"message_id": message_id,
+"parse_mode": "Markdown"
+}
+if reply_markup:
+for key, value in reply_markup.items():
+data[key] = value
+
+async with aiohttp.ClientSession(headers=headers) as session:
+async with session.post(apiEndpoint_edit, data=json.dumps(data)) as resp:
+ret = await resp.json()
+return ret
+```
+
+```python
+reply_markup = {"reply_markup": {
+"inline_keyboard": [
+[
+{'callback_data': 'lc_telegram', 'text': 'telegram', 'url': 'https://t.me/langchain_kr'},
+{'callback_data': 'lc_website', 'text': 'website', 'url': 'http://langchain.io/'}
+],
+[
+{'callback_data': 'lc_koreos', 'text': 'koreos', 'url': 'http://koreos.io/LangChain'},
+{'callback_data': 'set_lang', 'text': '⚙ Set your language'}
+]
+]
+}}
+```
+
+
