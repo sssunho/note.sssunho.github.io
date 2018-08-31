@@ -1,0 +1,190 @@
+<h2 id="steem-python">Steem Python</h2>
+
+<h3 id="steem-설치시-scrypt-에러-발생">steem 설치시 scrypt 에러 발생</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  scrypt-1.2.0/libcperciva/crypto/crypto_aes.c:6:10: fatal error: <span class="s1">'openssl/aes.h'</span> file not found
+  <span class="c">#include &lt;openssl/aes.h&gt;</span>
+           ^~~~~~~~~~~~~~~
+  1 error generated.
+  error: <span class="nb">command</span> <span class="s1">'/usr/bin/clang'</span> failed with <span class="nb">exit </span>status 1
+  
+  <span class="nt">----------------------------------------</span>
+  Failed building wheel <span class="k">for </span>scrypt
+</code></pre></div></div>
+
+<ul>
+  <li>해결 방법
+https://pypi.python.org/pypi/scrypt/</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">export </span><span class="nv">CFLAGS</span><span class="o">=</span><span class="s2">"-I</span><span class="k">$(</span>brew <span class="nt">--prefix</span> openssl<span class="k">)</span><span class="s2">/include </span><span class="nv">$CFLAGS</span><span class="s2">"</span>
+<span class="nv">$ </span><span class="nb">export </span><span class="nv">LDFLAGS</span><span class="o">=</span><span class="s2">"-L</span><span class="k">$(</span>brew <span class="nt">--prefix</span> openssl<span class="k">)</span><span class="s2">/lib </span><span class="nv">$LDFLAGS</span><span class="s2">"</span>
+</code></pre></div></div>
+<p>이건 맥에서만 쓰는거…ㅋㅋ…</p>
+
+<p>에러천지네..ㅎㅎ</p>
+
+<p>https://steemit.com/kr/@recrack/python-steemit-2-2-warning-urllib3-connectionpool-retrying-error</p>
+
+<p>https://steemit.com/kr/@recrack/python-steemit-2-1-steempy-toml-version-error</p>
+
+<p>{‘active’: {‘account_autos’: [],</p>
+
+<p>​            ‘key_auths’: [[‘STM5Mod7sjz6tufLYg9RG3W5kfA6moYcK2CZ1odoVrTaqW59KJgYy’,</p>
+
+<p>​                           1]],</p>
+
+<p>​            ‘weight_threshold’: 1},</p>
+
+<p>‘active_challenged’: False,</p>
+
+<p>‘average_bandwidth’: ‘25624021954’,</p>
+
+<p>‘average_market_bandwidth’: 0,</p>
+
+<p>‘balance’: ‘0.001 STEEM’,</p>
+
+<p>‘can_vote’: True,</p>
+
+<p>‘comment_count’: 0,</p>
+
+<p>‘created’: ‘2018-01-18T12:13:03’,</p>
+
+<p>‘curation_rewards’: 96,</p>
+
+<p>‘delegated_vesting_shares’: ‘0.000000 VESTS’,</p>
+
+<p>‘guest_bloggers’: [],</p>
+
+<p>‘id’: 611001,</p>
+
+<p>‘json_metadata’: ‘{“profile”:{“profile_image”:”https://steemitimages.com/DQmRNRoLYQ6L2UX6z7HFiVCMQ5TervPcBnGsGheuxFpZYUY/steemprofile.jpg”}}’,</p>
+
+<p>‘last_account_recovery’: ‘1970-01-01T00:00:00’,</p>
+
+<p>‘last_account_update’: ‘2018-02-08T05:51:18’,</p>
+
+<p>‘last_active_proved’: ‘1970-01-01T00:00:00’,</p>
+
+<p>‘last_bandwidth_update’: ‘2018-03-07T03:00:00’,</p>
+
+<p>‘last_market_bandwidth_update’: ‘1970-01-01T00:00:00’,</p>
+
+<p>‘last_owner_proved’: ‘1970-01-01T00:00:00’,</p>
+
+<p>‘last_owner_update’: ‘2018-01-18T12:16:57’,</p>
+
+<p>‘last_post’: ‘2018-03-07T03:00:00’,</p>
+
+<p>‘last_root_post’: ‘2018-03-06T09:46:06’,</p>
+
+<p>‘last_vote_time’: ‘2018-03-07T02:55:30’,</p>
+
+<p>‘lifetime_bandwidth’: ‘137189000000’,</p>
+
+<p>‘lifetime_market_bandwidth’: 0,</p>
+
+<p>‘lifetime_vote_count’: 0,</p>
+
+<p>‘market_history’: [],</p>
+
+<p>‘memo_key’: ‘STM5gM7Bgs3PoJEQjmkHs9oBxZVk6duYKpk6upUv7XrmKMfQFtcin’,</p>
+
+<p>‘mined’: False,</p>
+
+<p>‘name’: ‘ciceron’,</p>
+
+<p>‘next_vesting_withdrawal’: ‘1969-12-31T23:59:59’,</p>
+
+<p>‘other_history’: [],</p>
+
+<p>‘owner’: {‘account_auths’: [],</p>
+
+<p>​           ‘key_auths’: [[‘STM7pzw4AjWWp6d41QwdMZZ2y6yVuzobxguFpcB7UToby3Z489erV’,</p>
+
+<p>​                          1]],</p>
+
+<p>​           ‘weight_threshold’: 1},</p>
+
+<p>‘owner_challenged’: False,</p>
+
+<p>‘post_count’: 91,</p>
+
+<p>‘post_history’: [],</p>
+
+<p>‘posting’: {‘account_auths’: [],</p>
+
+<p>​             ‘key_auths’: [[‘STM61niVHbenbHzQP94Gg7EqbG3tGCTv6SoxWPhPWegZgoTFd3Bkb’,</p>
+
+<p>​                            1]],</p>
+
+<p>​             ‘weight_threshold’: 1},</p>
+
+<p>‘posting_rewards’: 7281,</p>
+
+<p>‘proxied_vsf_votes’: [0, 0, 0, 0],</p>
+
+<p>‘proxy’: ‘’,</p>
+
+<p>‘received_vesting_shares’: ‘942349.156248 VESTS’,</p>
+
+<p>‘recovery_account’: ‘steem’,</p>
+
+<p>‘reputation’: ‘93676959734’,</p>
+
+<p>‘reset_account’: ‘null’,</p>
+
+<p>‘reward_sbd_balance’: ‘2.484 SBD’,</p>
+
+<p>‘reward_steem_balance’: ‘0.000 STEEM’,</p>
+
+<p>‘reward_vesting_balance’: ‘1584.965516 VESTS’,</p>
+
+<p>‘reward_vesting_steem’: ‘0.776 STEEM’,</p>
+
+<p>‘savings_balance’: ‘0.000 STEEM’,</p>
+
+<p>‘savings_sbd_balance’: ‘0.000 SBD’,</p>
+
+<p>‘savings_sbd_last_interest_payment’: ‘1970-01-01T00:00:00’,</p>
+
+<p>‘savings_sbd_seconds’: ‘0’,</p>
+
+<p>‘savings_sbd_seconds_last_update’: ‘1970-01-01T00:00:00’,</p>
+
+<p>‘savings_withdraw_requests’: 0,</p>
+
+<p>‘sbd_balance’: ‘10.650 SBD’,</p>
+
+<p>‘sbd_last_interest_payment’: ‘1970-01-01T00:00:00’,</p>
+
+<p>‘sbd_seconds’: ‘0’,</p>
+
+<p>‘sbd_seconds_last_update’: ‘2018-03-02T05:10:33’,</p>
+
+<p>‘tags_usage’: [],</p>
+
+<p>‘to_withdraw’: 0,</p>
+
+<p>‘transfer_history’: [],</p>
+
+<p>‘vesting_balance’: ‘0.000 STEEM’,</p>
+
+<p>‘vesting_shares’: ‘7085.502292 VESTS’,</p>
+
+<p>‘vesting_withdraw_rate’: ‘0.000000 VESTS’,</p>
+
+<p>‘vote_history’: [],</p>
+
+<p>‘voting_power’: 9800,</p>
+
+<p>‘withdraw_routes’: 0,</p>
+
+<p>‘withdrawn’: 0,</p>
+
+<p>‘witness_votes’: [],</p>
+
+<p>‘witnesses_voted_for’: 0}</p>
+
+<p>Process finished with exit code 0</p>
+

@@ -2,36 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>git/ github, fork and pull request - sunho lee.</title>
+	<title>python/ install on python3 - sunho lee.</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="sunho lee." property="og:site_name">
   
-    <meta content="git/ github, fork and pull request" property="og:title">
+    <meta content="python/ install on python3" property="og:title">
   
   
     <meta content="article" property="og:type">
   
   
-    <meta content="Hi, I prefer sunho." property="og:description">
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
   
   
-    <meta content="http://localhost:4000/2018/07/14/github-fork.html" property="og:url">
+    <meta content="http://localhost:4000/2018/07/12/1020-python-setting.html" property="og:url">
   
   
-    <meta content="2018-07-14T00:00:00+09:00" property="article:published_time">
+    <meta content="2018-07-12T10:20:00+09:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/sunny-ciceron.jpeg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/software.jpg" property="og:image">
   
   
     
   
   
     
-    <meta content="git" property="article:tag">
+    <meta content="Productivity" property="article:tag">
+    
+    <meta content="Software" property="article:tag">
     
   
 
@@ -39,19 +41,19 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@sssunho# add your Twitter handle">
   
-    <meta name="twitter:title" content="git/ github, fork and pull request">
+    <meta name="twitter:title" content="python/ install on python3">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/2018/07/14/github-fork.html">
+    <meta name="twitter:url" content="http://localhost:4000/2018/07/12/1020-python-setting.html">
   
   
-    <meta name="twitter:description" content="Hi, I prefer sunho.">
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/sunny-ciceron.jpeg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/software.jpg">
   
 
-	<meta name="description" content="">
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -117,61 +119,67 @@
   <article class="article-page">
   <div class="page-content">
     
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/software.jpg alt="python/ install on python3">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">git/ github, fork and pull request</h1>
-        <div class="page-date"><span>2018, Jul 14&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">python/ install on python3</h1>
+        <div class="page-date"><span>2018, Jul 12&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <h2 id="issue">issue</h2>
+      <h3 id="spec">spec</h3>
 
-<p>github repository를 fork하여 작업할 일이 생겼습니다.</p>
-
-<p>github contributions를 초록빛으로 물들이기에도 좋은 기회입니다.</p>
-
-<p><br /></p>
-
-<h2 id="process">process</h2>
-
-<p>github에서 너무 친절하게 설명을 해줘서, 굳이 제가 따로 적을 필요 없을거같아 링크를 남깁니다.</p>
+<ul>
+  <li>ubuntu</li>
+  <li>python 3.5</li>
+</ul>
 
 <p><br /></p>
 
-<h3 id="fork-a-github-repository">fork a github repository</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>python3 <span class="nt">-version</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>python3-pip
+<span class="nv">$ </span>pip3 <span class="nt">--version</span>
+<span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>virtualenv
 
-<p><a href="https://help.github.com/articles/fork-a-repo/">github - Fork a repo</a></p>
+<span class="nv">$ </span>virtualenv <span class="nt">-p</span> python3 <span class="sb">`</span>virtualenv_name<span class="sb">`</span>
+Already using interpreter /usr/bin/python3
+Using base prefix <span class="s1">'/usr'</span>
+New python executable <span class="k">in</span> /home/ubuntu/mycat/bin/python3
+Also creating executable <span class="k">in</span> /home/ubuntu/mycat/bin/python
+Installing setuptools, pkg_resources, pip, wheel...done.
 
-<p><a href="https://help.github.com/articles/syncing-a-fork/">github - Syncing a fork</a></p>
+<span class="nv">$ </span><span class="nb">source</span> <span class="sb">`</span>virtualenv_name<span class="sb">`</span>/bin/activate
+<span class="nv">$ </span><span class="nb">.</span> <span class="sb">`</span>virtualenv_name<span class="sb">`</span>/bin/activate
 
-<p><br /></p>
 
-<h3 id="pull-request-to-original-repository">pull request to original repository</h3>
+</code></pre></div></div>
 
-<p><a href="https://help.github.com/articles/about-pull-requests/">github - about pull requests</a></p>
+<p>https://cjh5414.github.io/ubuntu-pyenv-virtualenv/</p>
 
-<p>pull request 할 때 메세지를 적습니다.</p>
+<p>ImportError: No module named ‘google’</p>
 
-<p>이 때 issue를 해결하여서 pull request를 보낸 거라면, 메세지에 <code class="highlighter-rouge">#issue_number</code>를 적어주면 해당 이슈에 자동으로 연결되어 관리자가 보다 쉽게 issue를 처리할 수 있습니다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install --upgrade google-api-python-client
+</code></pre></div></div>
 
-<p><br /></p>
+<p>pip 설치하기
+<code class="highlighter-rouge">python3 get-pip.py</code></p>
 
-<h2 id="epilogue">epilogue</h2>
-
-<p>익숙해지는 git 명령어가 많아질수록 뿌듯해진다. 발전하고 있다는 느낌이 들어서.</p>
-
-<p>이렇게 다른 사람의 repository에 기여를 처음 해보았습니다.</p>
-
-<p>오픈 소스에 기여하는게 이런 건가?</p>
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=git/ github, fork and pull request&url=http://localhost:4000/2018/07/14/github-fork.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/14/github-fork.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/14/github-fork.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+          <a href="https://twitter.com/intent/tweet?text=python/ install on python3&url=http://localhost:4000/2018/07/12/1020-python-setting.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/12/1020-python-setting.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/12/1020-python-setting.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
-            <a href="/tags#git" class="tag">&#35; git</a>
+            <a href="/tags#Productivity" class="tag">&#35; Productivity</a>
+          
+            <a href="/tags#Software" class="tag">&#35; Software</a>
           
         </div>
       </div>

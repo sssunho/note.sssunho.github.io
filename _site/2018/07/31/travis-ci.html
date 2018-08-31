@@ -2,36 +2,38 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>git/ github, fork and pull request - sunho lee.</title>
+	<title>travis ci/ 시작하기 - sunho lee.</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="sunho lee." property="og:site_name">
   
-    <meta content="git/ github, fork and pull request" property="og:title">
+    <meta content="travis ci/ 시작하기" property="og:title">
   
   
     <meta content="article" property="og:type">
   
   
-    <meta content="Hi, I prefer sunho." property="og:description">
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
   
   
-    <meta content="http://localhost:4000/2018/07/14/github-fork.html" property="og:url">
+    <meta content="http://localhost:4000/2018/07/31/travis-ci.html" property="og:url">
   
   
-    <meta content="2018-07-14T00:00:00+09:00" property="article:published_time">
+    <meta content="2018-07-31T13:25:00+09:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/sunny-ciceron.jpeg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/software.jpg" property="og:image">
   
   
     
   
   
     
-    <meta content="git" property="article:tag">
+    <meta content="ci" property="article:tag">
+    
+    <meta content="travis-ci" property="article:tag">
     
   
 
@@ -39,19 +41,19 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@sssunho# add your Twitter handle">
   
-    <meta name="twitter:title" content="git/ github, fork and pull request">
+    <meta name="twitter:title" content="travis ci/ 시작하기">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/2018/07/14/github-fork.html">
+    <meta name="twitter:url" content="http://localhost:4000/2018/07/31/travis-ci.html">
   
   
-    <meta name="twitter:description" content="Hi, I prefer sunho.">
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/sunny-ciceron.jpeg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/software.jpg">
   
 
-	<meta name="description" content="">
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -117,61 +119,109 @@
   <article class="article-page">
   <div class="page-content">
     
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=/assets/img/software.jpg alt="travis ci/ 시작하기">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">git/ github, fork and pull request</h1>
-        <div class="page-date"><span>2018, Jul 14&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">travis ci/ 시작하기</h1>
+        <div class="page-date"><span>2018, Jul 31&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <h2 id="issue">issue</h2>
+      <p>https://docs.travis-ci.com/user/getting-started/</p>
 
-<p>github repository를 fork하여 작업할 일이 생겼습니다.</p>
+<p>`.travis.yml</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>language: python
+python:
+- '3.6'
 
-<p>github contributions를 초록빛으로 물들이기에도 좋은 기회입니다.</p>
+before_install:
+- openssl aes-256-cbc -K $encrypted_fe7a31125bf0_key -iv $encrypted_fe7a31125bf0_iv
+  -in config.json.enc -out config.json -d
 
-<p><br /></p>
+install:
+- pip install -r requirement.txt
+- python -m nltk.downloader punkt
 
-<h2 id="process">process</h2>
+script: pytest test
+sudo: enabled
+services:
+- redis-server
+</code></pre></div></div>
 
-<p>github에서 너무 친절하게 설명을 해줘서, 굳이 제가 따로 적을 필요 없을거같아 링크를 남깁니다.</p>
+<ul>
+  <li>testcase를 자동으로 돌려줄 도구가 필요했다</li>
+</ul>
 
-<p><br /></p>
+<p>지속적인 통합, continuos integration</p>
 
-<h3 id="fork-a-github-repository">fork a github repository</h3>
+<ul>
+  <li>travis-ci 계정 만들기</li>
+</ul>
 
-<p><a href="https://help.github.com/articles/fork-a-repo/">github - Fork a repo</a></p>
+<p>https://travis-ci.org/</p>
 
-<p><a href="https://help.github.com/articles/syncing-a-fork/">github - Syncing a fork</a></p>
+<ul>
+  <li>
+    <p>travis-ci 로그인 후, profile 들어가서 테스트 돌릴 repository 활성화 시켜주기</p>
+  </li>
+  <li>
+    <p>github repository에 올리면 안되는, 설정키, 비밀 파일 올리기</p>
+  </li>
+</ul>
 
-<p><br /></p>
+<p>https://docs.travis-ci.com/user/encrypting-files/
+https://blog.outsider.ne.kr/1252</p>
 
-<h3 id="pull-request-to-original-repository">pull request to original repository</h3>
+<p>터미널에서 github repository로 cd 해준 후, travis login을 해준 후 진행해줄 것</p>
 
-<p><a href="https://help.github.com/articles/about-pull-requests/">github - about pull requests</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ travis encrypt-file super_secret.txt --add
+</code></pre></div></div>
+<p>명령어를 진행하면 .travis.yml에 자동으로 명령어가 등록된다.</p>
 
-<p>pull request 할 때 메세지를 적습니다.</p>
+<p>비밀파일.enc 파일과 함께 git push 하기. 비밀파일은 절대 같이 push하지 말 것</p>
 
-<p>이 때 issue를 해결하여서 pull request를 보낸 거라면, 메세지에 <code class="highlighter-rouge">#issue_number</code>를 적어주면 해당 이슈에 자동으로 연결되어 관리자가 보다 쉽게 issue를 처리할 수 있습니다.</p>
+<ul>
+  <li>
+    <p>.travis.yml
+requirement.txt에 있는 것부터 설치도되록 설정해줘야한다.</p>
 
-<p><br /></p>
+    <ul>
+      <li>nltk 설치하는 명령어</li>
+    </ul>
+  </li>
+</ul>
 
-<h2 id="epilogue">epilogue</h2>
+<p>install:</p>
+<ul>
+  <li>“python -m nltk.downloader punkt”</li>
+</ul>
 
-<p>익숙해지는 git 명령어가 많아질수록 뿌듯해진다. 발전하고 있다는 느낌이 들어서.</p>
+<p>-로 넣으면 여러개 넣을 수 있고, 아니면 install: qwerqqr로 한줄만 넣을 수 있음</p>
 
-<p>이렇게 다른 사람의 repository에 기여를 처음 해보았습니다.</p>
+<ul>
+  <li>redis 설치</li>
+</ul>
 
-<p>오픈 소스에 기여하는게 이런 건가?</p>
+<p>https://docs.travis-ci.com/user/database-setup/#redis</p>
+
+<p>services: - redis-server 만 넣어주면 알아서 돌아간다</p>
+
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=git/ github, fork and pull request&url=http://localhost:4000/2018/07/14/github-fork.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/14/github-fork.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/14/github-fork.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+          <a href="https://twitter.com/intent/tweet?text=travis ci/ 시작하기&url=http://localhost:4000/2018/07/31/travis-ci.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/07/31/travis-ci.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/31/travis-ci.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
-            <a href="/tags#git" class="tag">&#35; git</a>
+            <a href="/tags#ci" class="tag">&#35; ci</a>
+          
+            <a href="/tags#travis-ci" class="tag">&#35; travis-ci</a>
           
         </div>
       </div>

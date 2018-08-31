@@ -1,0 +1,93 @@
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from flask import Flask, request, make_response, jsonify, send_file
+import io
+
+app <span class="o">=</span> Flask<span class="o">(</span>__name__<span class="o">)</span>
+
+@app.route<span class="o">(</span><span class="s1">'/'</span><span class="o">)</span>
+def hello_world<span class="o">()</span>:
+    <span class="k">return</span> <span class="s1">'Hello World!'</span>
+
+
+<span class="c">#: 하나의 함수, 여러 메소드 설정</span>
+@app.route<span class="o">(</span><span class="s1">'/tutorial/methods'</span>, <span class="nv">methods</span><span class="o">=[</span><span class="s1">'GET'</span>, <span class="s1">'POST'</span>, <span class="s1">'PUT'</span>, <span class="s1">'DELETE'</span><span class="o">])</span>
+def tutorial6<span class="o">()</span>:
+    <span class="k">if </span>request.method <span class="o">==</span> <span class="s1">'GET'</span>: <span class="k">return</span> <span class="s1">'조회를 하고 싶을 때는 GET을 써주세요'</span>
+    <span class="k">elif </span>request.method <span class="o">==</span> <span class="s1">'POST'</span>: <span class="k">return</span> <span class="s1">'새로운 데이터를 만들 때는 POST를 써주세요'</span>
+    <span class="k">elif </span>request.method <span class="o">==</span> <span class="s1">'PUT'</span>: <span class="k">return</span> <span class="s1">'수정을 할 때는 PUT을 써주세요'</span>
+    <span class="k">elif </span>request.method <span class="o">==</span> <span class="s1">'DELETE'</span>: <span class="k">return</span> <span class="s1">'삭제를 할 때는 DELETE를 써주세요'</span>
+
+
+<span class="s1">'''
+참고
+http://flask.pocoo.org/docs/0.12/api/#incoming-request-data
+'''</span>
+
+<span class="c">#: 동적 라우팅 파라미터</span>
+@app.route<span class="o">(</span><span class="s1">'/tutorial/parameters/string/&lt;parameter1&gt;/num/&lt;int:parameter2&gt;'</span><span class="o">)</span>
+def tutorial1<span class="o">(</span>parameter1, parameter2<span class="o">)</span>:
+    <span class="s1">'''
+    :param parameter1: 데이터 타입을 정해주지 않으면 default로 string으로 처리된다.
+    :param parameter2: 데이터 타입을 정해주면 해당 데이터 타입으로만 받을 수 있다.
+
+    :return: 결과값을 json으로 HTTP 상태코드와 함께 출력해준다.
+    '''</span>
+    <span class="k">return </span>make_response<span class="o">(</span>jsonify<span class="o">(</span><span class="nv">parameter1</span><span class="o">=</span>parameter1, <span class="nv">parameter2</span><span class="o">=</span>parameter2<span class="o">)</span>, 200<span class="o">)</span>
+
+
+<span class="c">#: 쿼리 스트링</span>
+@app.route<span class="o">(</span><span class="s1">'/tutorial/queryString'</span><span class="o">)</span>
+def tutorial2<span class="o">()</span>:
+    <span class="s1">'''
+    /tutorial?qw=something 같이 요청한다.
+    쿼리스트링은 데이터타입이 string이기 때문에 int를 받으려면 int(qs)로 변환시켜주어야한다.
+    '''</span>
+    <span class="c"># get()함수를 쓰는 이유: 만약 요청에 포함되지 않았을 때 None으로 들어오게하여 에러 처리를 보다 쉽게 할 수 있다.</span>
+    <span class="c">#query_string = request.args.get('qs', None)</span>
+
+    <span class="c"># 특정 파라미터가 아닌 입력된 모든 파라미터를 받고 싶은 경우</span>
+    query_string <span class="o">=</span> request.args
+    <span class="k">return </span>make_response<span class="o">(</span>jsonify<span class="o">(</span>query_string<span class="o">)</span>, 200<span class="o">)</span>
+
+
+<span class="c">#: 폼 데이터 받기</span>
+@app.route<span class="o">(</span><span class="s1">'/tutorial/form'</span>, <span class="nv">methods</span><span class="o">=[</span><span class="s1">'POST'</span><span class="o">])</span>
+def tutorial3<span class="o">()</span>:
+    <span class="s1">'''
+    데이터는 POST, PUT 메소드를 사용하는 것을 추천합니다.
+    '''</span>
+    form <span class="o">=</span> request.form.get<span class="o">(</span><span class="s1">'form'</span>, None<span class="o">)</span>
+    <span class="k">return </span>make_response<span class="o">(</span>jsonify<span class="o">(</span><span class="nv">form</span><span class="o">=</span>form<span class="o">)</span>, 200<span class="o">)</span>
+
+
+<span class="c">#: 쿼리스트링과 폼 구분없이 데이터 받기</span>
+@app.route<span class="o">(</span><span class="s1">'/tutorial/data'</span>, <span class="nv">methods</span><span class="o">=[</span><span class="s1">'POST'</span><span class="o">])</span>
+def tutorial4<span class="o">()</span>:
+    <span class="s1">'''
+    values를 통해 쿼리스트링과 폼의 구분없이 데이터를 받을 수 있다.
+
+    만약 쿼리스트링과 폼 동시에 데이터가 올 경우 쿼리스트링의 값을 받는다.
+    getlist()로 받으면 어디서 들어오든, 동시에 들어오든 상관없이 배열로 받을 수 있다.
+    '''</span>
+    data1 <span class="o">=</span> request.values.get<span class="o">(</span><span class="s1">'data1'</span>, None<span class="o">)</span>
+    data2 <span class="o">=</span> request.values.getlist<span class="o">(</span><span class="s1">'data2'</span>, None<span class="o">)</span>
+    <span class="k">return </span>make_response<span class="o">(</span>jsonify<span class="o">(</span><span class="nv">data1</span><span class="o">=</span>data1, <span class="nv">data2</span><span class="o">=</span>data2<span class="o">)</span>, 200<span class="o">)</span>
+
+
+<span class="c">#: 이미지 입출력</span>
+@app.route<span class="o">(</span><span class="s1">'/tutorial/image'</span>, <span class="nv">methods</span><span class="o">=[</span><span class="s1">'POST'</span><span class="o">])</span>
+def tutorial5<span class="o">()</span>:
+    <span class="s1">'''
+    request.files는 byte로 오기 때문에 출력할 때 io.BytesIO를 이용해야한다.
+    '''</span>
+    img <span class="o">=</span> request.files.get<span class="o">(</span><span class="s1">'img'</span>, None<span class="o">)</span>
+    filename <span class="o">=</span> img.filename
+    mimetype <span class="o">=</span> img.content_type
+    img <span class="o">=</span> img.read<span class="o">()</span>
+    <span class="k">return </span>send_file<span class="o">(</span>io.BytesIO<span class="o">(</span>img<span class="o">)</span>, <span class="nv">attachment_filename</span><span class="o">=</span>filename<span class="o">)</span>
+
+
+
+<span class="k">if </span>__name__ <span class="o">==</span> <span class="s1">'__main__'</span>:
+    app.run<span class="o">()</span>
+
+</code></pre></div></div>
