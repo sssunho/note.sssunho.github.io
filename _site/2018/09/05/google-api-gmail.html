@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>eosio/ understand smart contracts - sunho lee.</title>
+	<title>Gmail API - sunho lee.</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="sunho lee." property="og:site_name">
   
-    <meta content="eosio/ understand smart contracts" property="og:title">
+    <meta content="Gmail API" property="og:title">
   
   
     <meta content="article" property="og:type">
@@ -17,10 +17,10 @@
     <meta content="Hi, I prefer sunho." property="og:description">
   
   
-    <meta content="http://localhost:4000/2018/08/23/understand_eosio.html" property="og:url">
+    <meta content="http://localhost:4000/2018/09/05/google-api-gmail.html" property="og:url">
   
   
-    <meta content="2018-08-23T06:00:00+09:00" property="article:published_time">
+    <meta content="2018-09-05T06:00:00+09:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
@@ -31,9 +31,9 @@
   
   
     
-    <meta content="eosio" property="article:tag">
+    <meta content="google" property="article:tag">
     
-    <meta content="eos" property="article:tag">
+    <meta content="google_api" property="article:tag">
     
   
 
@@ -41,10 +41,10 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@sssunho# add your Twitter handle">
   
-    <meta name="twitter:title" content="eosio/ understand smart contracts">
+    <meta name="twitter:title" content="Gmail API">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/2018/08/23/understand_eosio.html">
+    <meta name="twitter:url" content="http://localhost:4000/2018/09/05/google-api-gmail.html">
   
   
     <meta name="twitter:description" content="Hi, I prefer sunho.">
@@ -122,35 +122,42 @@
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">eosio/ understand smart contracts</h1>
-        <div class="page-date"><span>2018, Aug 23&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">Gmail API</h1>
+        <div class="page-date"><span>2018, Sep 05&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>Tutorial 따라하는건 전혀 어렵지 않은데, 이해없이 따라하니까 남는게 없다.</p>
-
-<p>하나씩 차근차근 다시 해보겠습니다. 말로 설명할 수 있을 때까지!</p>
-
-<h1 id="smart-contracts">Smart Contracts</h1>
-
-<p>https://developers.eos.io/eosio-cpp/docs</p>
-
-<h2 id="required-knowledge">Required Knowledge</h2>
-
-<ul>
-  <li><a href="https://webassembly.org/">WebAssembly</a></li>
+      <ul>
+  <li>https://developers.google.com/gmail/api/quickstart/python</li>
 </ul>
 
+<p><code class="highlighter-rouge">SCOPES</code> 수정하기</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SCOPES = ['https://mail.google.com/', 'https://www.googleapis.com/auth/gmail.modify', 'https://www.googleapis.com/auth/gmail.compose', 'https://www.googleapis.com/auth/gmail.send']
+</code></pre></div></div>
+
+<ul>
+  <li>https://developers.google.com/gmail/api/guides/sending</li>
+</ul>
+
+<p><code class="highlighter-rouge">return {'raw': base64.urlsafe_b64encode(message.as_string())}</code>
+대신 
+<code class="highlighter-rouge">return {'raw': base64.urlsafe_b64encode(message.as_string().encode()).decode()}</code>
+로 실행하기</p>
+
+<ul>
+  <li>Linux에서 처음 돌릴 때
+<code class="highlighter-rouge">python run.py --noauth_local_webserver</code>로 실행 후 URL 별도로 실행하여 발급된 코드 입력하면 됩니다.</li>
+</ul>
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=eosio/ understand smart contracts&url=http://localhost:4000/2018/08/23/understand_eosio.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/08/23/understand_eosio.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/08/23/understand_eosio.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+          <a href="https://twitter.com/intent/tweet?text=Gmail API&url=http://localhost:4000/2018/09/05/google-api-gmail.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/09/05/google-api-gmail.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/09/05/google-api-gmail.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
-            <a href="/tags#eosio" class="tag">&#35; eosio</a>
+            <a href="/tags#google" class="tag">&#35; google</a>
           
-            <a href="/tags#eos" class="tag">&#35; eos</a>
+            <a href="/tags#google_api" class="tag">&#35; google_api</a>
           
         </div>
       </div>
