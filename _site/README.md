@@ -1,8 +1,8 @@
 # sssunho.github.io
 
-Hi, I prefer sunho.
+Hi, I am sunho Lee.
 
-I am a web developer focusing on back-end development. 
+I am a developer focusing on back-end development. 
 
 
 Always hungry to keep learning. 
