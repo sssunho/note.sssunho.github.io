@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2018/07/12/2305-linux-screen.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Sunho Lee" href="http://localhost:4000///feed.xml"/>
+
+    <!-- Font Awesome -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor/font-awesome.min.css">
+    
+    
+
+    <!-- Google Fonts -->
+    
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css"> 
+    
+
+    <!-- KaTeX 0.8.3 -->
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor/katex.min.css">
+    <script src="/assets/js/vendor/katex.min.js">
+    </script>
+    
+
+    <!-- Google Analytics -->
+    
+    
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>os/ about screen | Developing Sunho</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="os/ about screen" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="issue" />
+<meta property="og:description" content="issue" />
+<link rel="canonical" href="http://localhost:4000/2018/07/12/2305-linux-screen.html" />
+<meta property="og:url" content="http://localhost:4000/2018/07/12/2305-linux-screen.html" />
+<meta property="og:site_name" content="Developing Sunho" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-07-12T23:06:00+09:00" />
+<script type="application/ld+json">
+{"description":"issue","@type":"BlogPosting","url":"http://localhost:4000/2018/07/12/2305-linux-screen.html","headline":"os/ about screen","dateModified":"2018-07-12T23:06:00+09:00","datePublished":"2018-07-12T23:06:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/07/12/2305-linux-screen.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Manual seo tags -->
+    <!--
+    <title>os/ about screen | Sunho Lee</title>
+    <meta name="description" content="issue">
+    -->
+</head>
+
+  <body>
+    <header class="site-header">
+    
+    <!-- Logo and title -->
+	<div class="branding">
+		<a href="/">
+			<img class="avatar" src="/assets/img/triangle.svg" alt=""/>
+		</a>
+
+		<h1 class="site-title">
+			<a href="/">Sunho Lee</a>
+		</h1>
+	</div>
+    
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+    
+    <!-- Menu -->
+    <ul class="hide">
+        <!-- Auto Generation of NORMAL pages in the navbar -->
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/about/">
+                About
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/gallery/">
+                Gallery
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/portfolio/">
+                Portfolio
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+        
+        <!-- Auto Generation of SPECIAL pages in the navbar -->
+        
+          
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" href="http://localhost:4000/search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </li>
+          
+        
+          
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" href="http://localhost:4000/tags">
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                </a>
+            </li>
+          
+        
+    </ul>
+        
+	</nav>
+</header>
+
+    <div class="content">
+      <article >
+  <header id="main" style="background-image: url('/')">
+    <h1 id="os%2F+about+screen" class="title">os/ about screen</h1>
+    <p class="meta">
+    July 12, 2018
+    
+    </p>
+  </header>
+  <section class="post-content">
+  
+    <h2 id="issue">issue</h2>
+
+<p>서버를 운영할 때, 터미널을 끄면 컴퓨터가 종료되듯 실행하고 있던 것들이 다 꺼지는 상황을 겪으신 적 있으신지요?</p>
+
+<p>node.js를 쓸 땐 nodemon이 있지만 python, flask를 쓸 땐 어떻게 하시나요?</p>
+
+<p>여러 방법이 있는데, 저는 <code class="highlighter-rouge">screen</code>을 사용합니다.</p>
+
+<p><br /></p>
+
+<h2 id="about">about</h2>
+
+<p>스크린은 윈도우 위에 윈도우를 띄우는 것이고, 스크린 내의 각 탭들은 크롬에서의 탭들이라 생각하면 됩니다.</p>
+
+<p><strong>linux 입장 &gt; screen 입장 &gt; 탭에서 작업</strong>하는 것입니다.</p>
+
+<p>스크린을 나와서 가상 서버를 나와도 스크린에서 실행중인 것들은 죽지 않고 계속 돕니다. 스크린을 삭제하지 않는 이상 계속말이죠.</p>
+
+<p>터미널이나 putty로 접속하여 작업하다가 컴퓨터를 꺼도 기존에 실행중이던 프로그램들이 꺼질 걱정을 하지 않아도되죠.</p>
+
+<p><br /></p>
+
+<h3 id="environment">environment</h3>
+
+<ul>
+  <li>linux, ubuntu</li>
+  <li>macos</li>
+</ul>
+
+<blockquote>
+  <p>macos에서 되는지는 실수로 macos에 그냥 screen 쳤다가 알게됐습니다. 허허</p>
+</blockquote>
+
+<p><br /></p>
+
+<h3 id="related-episodes-tags">related episodes, tags</h3>
+
+<ul>
+  <li>os</li>
+  <li>linux</li>
+  <li>macos</li>
+  <li>screen
+    <ul>
+      <li>install and set sreen</li>
+      <li>screen command</li>
+    </ul>
+  </li>
+</ul>
+
+  
+  </section>
+  
+  <!-- Social media shares -->
+  <div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2018/07/12/2305-linux-screen.html" target="_blank" title="Share on Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+          
+        <li>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/2018/07/12/2305-linux-screen.html" target="_blank" title="Share on Google+">
+			<i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Google+</span>
+		</a>
+        </li>
+             
+        <li>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2018/07/12/2305-linux-screen.html&title=os%2F+about+screen%20%7C%20Developing+Sunho&summary=&source=http://localhost:4000/2018/07/12/2305-linux-screen.html" target="_blank" title="Share on LinkedIn">
+			<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on LinkedIn</span>
+		</a>
+        </li>
+          
+        <li>
+            <a href="mailto:?subject=os%2F+about+screen%20%7C%20Developing+Sunho&body=:%20http://localhost:4000/2018/07/12/2305-linux-screen.html" target="_blank" title="Email">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+   
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#linux">
+      <p><i class="fa fa-tag fa-fw"></i> linux</p>
+    </a>
+    
+    <a class="button" href="/tags#macos">
+      <p><i class="fa fa-tag fa-fw"></i> macos</p>
+    </a>
+    
+    <a class="button" href="/tags#os">
+      <p><i class="fa fa-tag fa-fw"></i> os</p>
+    </a>
+    
+    <a class="button" href="/tags#screen">
+      <p><i class="fa fa-tag fa-fw"></i> screen</p>
+    </a>
+    
+  </div>
+</footer>
+
+    
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+  
+  <div id="previous-post" class="post-nav-post">
+      <p>Previous post</p>
+      <a href="/2018/07/12/1753-jenkins-slavenode.html">
+        jenkins/ create slave node via SSH
+      </a>
+  </div>
+  
+  
+  <div id="next-post" class="post-nav-post">
+      <p>Next post</p>
+      <a href="/2018/07/12/2328-linux-screen.html">
+        linux/ install and set screen
+      </a>
+  </div>
+  
+</div>
+
+    </div>
+    
+<footer class="site-footer">
+    <p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+	<a href="http://localhost:4000/feed.xml" title="Follow RSS feed">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+<li>
+	<a href="mailto:sssunho.lee@gmail.com" title="Email">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://www.facebook.com/sssunho.lee" title="Follow on Facebook">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="https://github.com/sssunho" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="http://instagram.com/sssunho_" title="Follow on Instagram">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="https://www.linkedin.com/in/sunho-lee/" title="Follow on LinkedIn">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+
+  </body>
+</html>

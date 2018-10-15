@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="http://localhost:4000/2017/09/10/sqlalchemy.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Sunho Lee" href="http://localhost:4000///feed.xml"/>
+
+    <!-- Font Awesome -->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor/font-awesome.min.css">
+    
+    
+
+    <!-- Google Fonts -->
+    
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css"> 
+    
+
+    <!-- KaTeX 0.8.3 -->
+    
+    <link rel="stylesheet" type="text/css" href="/assets/css/vendor/katex.min.css">
+    <script src="/assets/js/vendor/katex.min.js">
+    </script>
+    
+
+    <!-- Google Analytics -->
+    
+    
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Conference on Javascript | Developing Sunho</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="Conference on Javascript" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes." />
+<meta property="og:description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes." />
+<link rel="canonical" href="http://localhost:4000/2017/09/10/sqlalchemy.html" />
+<meta property="og:url" content="http://localhost:4000/2017/09/10/sqlalchemy.html" />
+<meta property="og:site_name" content="Developing Sunho" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-09-10T06:00:00+09:00" />
+<script type="application/ld+json">
+{"description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes.","@type":"BlogPosting","url":"http://localhost:4000/2017/09/10/sqlalchemy.html","headline":"Conference on Javascript","dateModified":"2017-09-10T06:00:00+09:00","datePublished":"2017-09-10T06:00:00+09:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2017/09/10/sqlalchemy.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Manual seo tags -->
+    <!--
+    <title>Conference on Javascript | Sunho Lee</title>
+    <meta name="description" content="```shell“””    # SQLAlchemy를 사용해봅시다.    http://docs.sqlalchemy.org/en/latest/“””#: confing 설정    DATABASE_CONFIG = {        ‘driver’: ‘mysql+pymysql’,       ...">
+    -->
+</head>
+
+  <body>
+    <header class="site-header">
+    
+    <!-- Logo and title -->
+	<div class="branding">
+		<a href="/">
+			<img class="avatar" src="/assets/img/triangle.svg" alt=""/>
+		</a>
+
+		<h1 class="site-title">
+			<a href="/">Sunho Lee</a>
+		</h1>
+	</div>
+    
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+    
+    <!-- Menu -->
+    <ul class="hide">
+        <!-- Auto Generation of NORMAL pages in the navbar -->
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/about/">
+                About
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/gallery/">
+                Gallery
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear" href="/portfolio/">
+                Portfolio
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+         
+        
+        <!-- Auto Generation of SPECIAL pages in the navbar -->
+        
+          
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" href="http://localhost:4000/search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+            </li>
+          
+        
+          
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" href="http://localhost:4000/tags">
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                </a>
+            </li>
+          
+        
+    </ul>
+        
+	</nav>
+</header>
+
+    <div class="content">
+      <article >
+  <header id="main" style="background-image: url('/')">
+    <h1 id="Conference+on+Javascript" class="title">Conference on Javascript</h1>
+    <p class="meta">
+    September 10, 2017
+    
+    </p>
+  </header>
+  <section class="post-content">
+  
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"""
+    # SQLAlchemy를 사용해봅시다.
+    http://docs.sqlalchemy.org/en/latest/
+"""</span>
+    
+<span class="c">#: confing 설정</span>
+    DATABASE_CONFIG <span class="o">=</span> <span class="o">{</span>
+        <span class="s1">'driver'</span>: <span class="s1">'mysql+pymysql'</span>,
+        <span class="s1">'host'</span>: <span class="s1">''</span>,
+        <span class="s1">'dbname'</span>: <span class="s1">''</span>,
+        <span class="s1">'user'</span>: <span class="s1">''</span>,
+        <span class="s1">'password'</span>: <span class="s1">''</span>,
+        <span class="s1">'port'</span>: 3306
+    <span class="o">}</span>
+    SQLALCHEMY_DATABASE_URI <span class="o">=</span> <span class="s1">'{driver}://{user}:{password}@{host}/{dbname}'</span>.format<span class="o">(</span><span class="k">**</span>DATABASE_CONFIG<span class="o">)</span>
+    SQLALCHEMY_TRACK_MODIFICATIONS <span class="o">=</span> True
+
+<span class="c">#: app/__init__ 설정</span>
+<span class="c"># Define the database object which is imported</span>
+<span class="c"># by modules and controllers</span>
+db <span class="o">=</span> SQLAlchemy<span class="o">(</span>app<span class="o">)</span>
+
+<span class="c"># Build the database:</span>
+<span class="c"># This will create the database file using SQLAlchemy</span>
+db.create_all<span class="o">()</span>
+
+
+<span class="c">########################################################################</span>
+
+<span class="c"># app/module/model에서 사용하기</span>
+from app import db
+from sqlalchemy import MetaData, Table, text, and_
+
+conn <span class="o">=</span> db.engine.connect<span class="o">()</span>
+meta <span class="o">=</span> MetaData<span class="o">(</span><span class="nb">bind</span><span class="o">=</span>db.engine<span class="o">)</span>
+os <span class="o">=</span> Table<span class="o">(</span><span class="s1">'doc_origin_sentences'</span>, meta, <span class="nv">autoload</span><span class="o">=</span>True<span class="o">)</span>
+
+<span class="c">#: 여러개의 쿼리를 실행할 때 Transaction 처리를 위해 필요 - UPDATE, INSERT할 떄</span>
+trans <span class="o">=</span> conn.begin<span class="o">()</span>
+try:
+    query1 <span class="o">=</span> conn.execute<span class="o">()</span>
+    query2 <span class="o">=</span> conn.execute<span class="o">()</span>
+
+    trans.commit<span class="o">()</span>  <span class="c"># 모든 쿼리를 실행하고 꼭 넣어야 실제 DB에 적용된다.</span>
+except:
+    trans.rollback<span class="o">()</span>  <span class="c"># 중간에 에러가 발생한 경우, Rollback()을 위해 넣어준다.</span>
+
+
+<span class="c"># SELECT</span>
+res <span class="o">=</span> conn.execute<span class="o">(</span>os.select<span class="o">(</span>and_<span class="o">(</span><span class="sb">`</span>조건1<span class="sb">`</span>, <span class="sb">`</span>조건2<span class="sb">`</span><span class="o">)))</span>.fetchall<span class="o">()</span>
+
+# UPDATE
+<span class="c"># p.c.id = p(테이블)의 id라는 c(칼럼)</span>
+res <span class="o">=</span> conn.execute<span class="o">(</span>p.update<span class="o">(</span>p.c.id <span class="o">==</span> pid<span class="o">)</span>, <span class="nv">name</span><span class="o">=</span>name, <span class="nv">status</span><span class="o">=</span>status, <span class="nv">due_date</span><span class="o">=</span>due_date<span class="o">)</span>
+
+<span class="c"># INSERT</span>
+res <span class="o">=</span> conn.execute<span class="o">(</span>p.insert<span class="o">()</span>, <span class="nv">name</span><span class="o">=</span>name, <span class="nv">due_date</span><span class="o">=</span>due_date, <span class="nv">open_grade</span><span class="o">=</span>open_grade<span class="o">)</span>
+
+
+<span class="c">#: text를 사용하면 일반 쿼리문을 그대로 실행할 수 있습니다</span>
+res <span class="o">=</span> conn.execute<span class="o">(</span>text<span class="o">(</span>
+    <span class="s2">"""SELECT os.id as sentence_id, d.origin_lang, d.trans_lang, os.text as origin_text
+            , IF(ts.text is not NULL, ts.text, '') as trans_text
+            , IF(ts.status is not NULL, ts.status, 0) as trans_status
+            , IF(ts.type is not NULL, ts.type, 0) as trans_type
+            , IF(comment_cnt is not NULL, comment_cnt, 0) as comment_cnt
+      FROM </span><span class="sb">`</span>marocat v1.1<span class="sb">`</span><span class="s2">.doc_origin_sentences os 
+      JOIN docs d ON d.id = os.doc_id
+      LEFT JOIN doc_trans_sentences ts ON ts.origin_id = os.id AND ts.is_deleted = FALSE
+      LEFT JOIN ( SELECT origin_id, COUNT(*) as comment_cnt FROM trans_comments 
+                  WHERE is_deleted = FALSE GROUP BY origin_id ) tc ON tc.origin_id = os.id
+      WHERE os.doc_id = :did AND os.is_deleted = FALSE;"""</span><span class="o">)</span>, <span class="nv">did</span><span class="o">=</span>211<span class="o">)</span>.fetchall<span class="o">()</span>
+
+<span class="c"># fetchall()</span>
+<span class="k">for </span>r <span class="k">in </span>res:
+    print<span class="o">(</span>r<span class="o">)</span>
+    print<span class="o">(</span>r[<span class="s1">'col1'</span><span class="o">])</span>
+
+<span class="c"># fetchone()</span>
+col1_res <span class="o">=</span> res[<span class="s1">'col1'</span><span class="o">]</span>
+
+
+<span class="c">########################################################################</span>
+
+<span class="c">#: 테이블 autoload하는 방법1</span>
+meta <span class="o">=</span> MetaData<span class="o">(</span><span class="nb">bind</span><span class="o">=</span>db.engine<span class="o">)</span>
+os <span class="o">=</span> Table<span class="o">(</span><span class="s1">'doc_origin_sentences'</span>, meta, <span class="nv">autoload</span><span class="o">=</span>True<span class="o">)</span>
+
+<span class="c">#: 테이블 autoload하는 방법2</span>
+class User<span class="o">(</span>db.Model<span class="o">)</span>:
+    meta <span class="o">=</span> MetaData<span class="o">(</span><span class="nb">bind</span><span class="o">=</span>db.engine<span class="o">)</span>
+    __table__ <span class="o">=</span> Table<span class="o">(</span><span class="s1">'translation_memory'</span>, meta, <span class="nv">autoload</span><span class="o">=</span>True<span class="o">)</span>
+
+<span class="c">#: 방법2 select 사용법</span>
+<span class="c"># res = User.query.all()</span>
+<span class="c"># print(res)</span>
+
+</code></pre></div></div>
+
+  
+  </section>
+  
+  <!-- Social media shares -->
+  <div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2017/09/10/sqlalchemy.html" target="_blank" title="Share on Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+          
+        <li>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/2017/09/10/sqlalchemy.html" target="_blank" title="Share on Google+">
+			<i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Google+</span>
+		</a>
+        </li>
+             
+        <li>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017/09/10/sqlalchemy.html&title=Conference+on+Javascript%20%7C%20Developing+Sunho&summary=&source=http://localhost:4000/2017/09/10/sqlalchemy.html" target="_blank" title="Share on LinkedIn">
+			<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on LinkedIn</span>
+		</a>
+        </li>
+          
+        <li>
+            <a href="mailto:?subject=Conference+on+Javascript%20%7C%20Developing+Sunho&body=:%20http://localhost:4000/2017/09/10/sqlalchemy.html" target="_blank" title="Email">
+			<i class="fa fa-envelope-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Email</span>
+		</a>
+        </li>
+        
+    </ul>
+</div>
+   
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#Conference">
+      <p><i class="fa fa-tag fa-fw"></i> Conference</p>
+    </a>
+    
+    <a class="button" href="/tags#Js">
+      <p><i class="fa fa-tag fa-fw"></i> Js</p>
+    </a>
+    
+  </div>
+</footer>
+
+    
+</article>
+
+<!-- Disqus -->
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+  
+  <div id="previous-post" class="post-nav-post">
+      <p>Previous post</p>
+      <a href="/2017/08/08/coloerpicker.html">
+        project/ color picker
+      </a>
+  </div>
+  
+  
+  <div id="next-post" class="post-nav-post">
+      <p>Next post</p>
+      <a href="/2017/09/12/error-response.html">
+        How I Rest From Work
+      </a>
+  </div>
+  
+</div>
+
+    </div>
+    
+<footer class="site-footer">
+    <p class="text">Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+	<a href="http://localhost:4000/feed.xml" title="Follow RSS feed">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+<li>
+	<a href="mailto:sssunho.lee@gmail.com" title="Email">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+	<a href="https://www.facebook.com/sssunho.lee" title="Follow on Facebook">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="https://github.com/sssunho" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="http://instagram.com/sssunho_" title="Follow on Instagram">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+<li>
+	<a href="https://www.linkedin.com/in/sunho-lee/" title="Follow on LinkedIn">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+	</a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+</footer>
+
+
+
+
+  </body>
+</html>
