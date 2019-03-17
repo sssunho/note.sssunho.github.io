@@ -93,7 +93,7 @@ tags: [bot, telegram]
     Done! Congratulations on your new bot. You will find it at t.me/sunnytestbot. You can now add a description, about section and profile picture for your bot, see /help for a list of commands. By the way, when you've finished creating your cool bot, ping our Bot Support if you want a better username for it. Just make sure the bot is fully operational before you do this.
 
     Use this token to access the HTTP API:
-    561471433:AAEeWZ7KdcqjYc4ujyufJHuKl8EpPQC3MdY
+    561471433:AAEeWZ7KdjYc4ujyufJHuKl8EpPQC3MdY
 
     For a description of the Bot API, see this page: https://core.telegram.org/bots/api
     ```
@@ -106,13 +106,13 @@ tags: [bot, telegram]
 
     위의 메세지는 많은 정보를 갖고 있는데, 그 중에서도 아래 두개는 꼭 저장해주세요.
 
-    - 토큰: 561471433:AAEeWZ7KdcqjYc4ujyufJHuKl8EpPQC3MdY
-    - 프로필 주소: t.me/sunnytestbot
+    - 토큰: 561471433:AAEeWZ7KdcqjYc4ujyufJHuKl8MdY
+    - 프로필 주소: t.me/testbot
 
     <br>
 
 7. `username`을 검색한다.
-    
+   
     결과로 내가 만든 봇의 `nickname`이 뜨는걸 확인할 수 있습니다.
 
     <br>
