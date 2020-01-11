@@ -8,7 +8,7 @@ https://wikidocs.net/book/31
 
 > - 시작한 이유
 >
-> `Test-Driven Development: By Example`을 실습과 함께 해보려 했는데, 나는 자바로 Hello, World!조차 할 줄 모르는 상태라 예제를 찾다가. 우연히 점프 투 자바 웹문서를 찾게 되었다.
+> `Test-Driven Development: By Example`을 실습과 함께 해보려 했는데, 나는 자바 프로젝트를 혼자 만들줄도 모르는 상태여서 예제를 찾다가. 우연히 점프 투 자바 웹문서를 찾게 되었다.
 
 
 
@@ -131,3 +131,27 @@ public class MapDataType {
 ```
 
 Python의 Dictionary 자료형과 같은 Map.
+
+
+
+
+
+## Control flow statement (제어문)
+
+### For each
+
+```java
+package ControlFlowStatement;
+
+public class ForEachLoop {
+    public static void main(String[] args) {
+        String[] numbers = {"one", "two", "three"};
+        for (String number : numbers) {
+            System.out.println(number);
+        }
+    }
+}
+```
+
+Java에는 `for (초기치; 조건문; 증가치)`만 있는줄 알았었다. 계속 업그레이드 되는구만
+
