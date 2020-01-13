@@ -1,8 +1,3 @@
-@FunctionalInterface
-interface Say {
-    int numbers(int a, int b);
-}
-
 public class Person {
     public void hi(Say say) {
         int number = say.numbers(3, 4);
