@@ -6,7 +6,7 @@
 [] 여러 개의 테스트 실행하기
 [O] 수집된 결과를 출력하기
 [O] wasRun에 로그 문자열 남기기
-[] 실패한 테스트 보고하기 
+[O] 실패한 테스트 보고하기
 """
 
 
@@ -22,8 +22,11 @@ class TestCase:
         result.test_started()
 
         self.setup()
-        method = getattr(self, self.name)
-        method()
+        try:
+            method = getattr(self, self.name)
+            method()
+        except:
+            result.test_failed()
         self.teardown()
 
         return result
@@ -52,12 +55,16 @@ class WasRun(TestCase):
 class TestResult:
     def __init__(self):
         self.runCount = 0
+        self.failureCount = 0
 
     def test_started(self):
         self.runCount += 1
 
+    def test_failed(self):
+        self.failureCount += 1
+
     def summary(self):
-        return '{} run, 0 failed'.format(self.runCount)
+        return '{} run, {} failed'.format(self.runCount, self.failureCount)
 
 
 class TestCaseTest(TestCase):
@@ -76,8 +83,15 @@ class TestCaseTest(TestCase):
         result = test.run()
         assert '1 run, 1 failed' == result.summary()
 
+    def test_failed_result_formatting(self):
+        result = TestResult()
+        result.test_started()
+        result.test_failed()
+        assert '1 run, 1 failed' == result.summary()
+
 
 if __name__ == '__main__':
     TestCaseTest('test_template_method').run()
     TestCaseTest('test_result').run()
+    TestCaseTest('test_failed_result_formatting').run()
     TestCaseTest('test_failed_result').run()
